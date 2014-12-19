@@ -165,8 +165,7 @@ vec.theta2[vec.theta2>(1-eps)] = 1-eps
 vec.lambda1[vec.lambda1 < eps] = eps
 vec.lambda2[vec.lambda2 < eps] = eps
 
-#Calculate Probability on "Testing" Set on 1:100 documents
-#Reminder: res[i,j] means word i in document j
+#Calculate Probability on Testing Set on 1:100 documents using Log Likelihood Poisson Distribution for Naive Bayes
 for(j in 1:length(vec.truth))
 {
   #print(res2[,testingidx[i]]%*%(log(vec.theta)-vec.lambda1 +res_y[,testingidx[i]]%*%log(vec.lambda1) - log(factorial(res_y[,testingidx[i]] - 1))))
